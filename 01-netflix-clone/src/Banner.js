@@ -10,6 +10,7 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData() {
+            console.log(process.env)
             const request = await axios.get(requests.fetchNetflixOriginals)
             setMovie(
                 request.data.results[
