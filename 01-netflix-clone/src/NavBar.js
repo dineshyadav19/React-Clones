@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./styles/NavBar.css"
 
-
 function NavBar() {
 
     const [show, handleShow] = useState(false);
