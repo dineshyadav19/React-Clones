@@ -2,14 +2,19 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore/lite';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
+const API_KEY = process.env.REACT_APP_FIREBASE_KEY
+const APP_ID = process.env.REACT_APP_FIREBASE_APPID
+const SENDER_ID = process.env.REACT_APP_FIREBASE_SENDERID
+const MEASUREMENT_ID = process.env.REACT_APP_FIREBASE_MEASUREMENTID
+
 const firebaseConfig = {
-  apiKey: "AIzaSyD7Ic_4e1cc3AxnOQWoNm618sOeW0u1qEM",
+  apiKey: API_KEY,
   authDomain: "netflix-clone-39110.firebaseapp.com",
   projectId: "netflix-clone-39110",
   storageBucket: "netflix-clone-39110.appspot.com",
-  messagingSenderId: "309113457858",
-  appId: "1:309113457858:web:9bd4b467d9ca6718523f5b",
-  measurementId: "G-VBVXB0QPH7"
+  messagingSenderId: SENDER_ID,
+  appId: APP_ID,
+  measurementId: MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig)
